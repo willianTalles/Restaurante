@@ -2,6 +2,8 @@
 #define _RESERVA_H_
 
 #include <iostream>
+#include <string>
+
 #include "status.h"
 #include "mesa.h"
 
@@ -9,16 +11,15 @@ class Reserva{
     private:
         Mesa mesa;
         Status status;
-
-        bool estarReservado();
     public:
         Reserva(); 
         ~Reserva();
     // Métodos setters 
-        void fazerReserva( Mesa mesa, Status status );
+        void fazerReserva( Mesa & mesa, Status status );
+        void removerReserva( Mesa & mesa, std::string data );
     // Métodos getters
-        void printReservaDaMesa ( Mesa mesa );
-        int estarReservado ( Mesa mesa, Status status );
+        void buscarReservaDaMesa ( Mesa mesa );
+        bool estarReservado ( Mesa mesa, Status status );
     //Sobrecargas
         //friend std::ostream& operator<< ( std::ostream &o, Mesa &mesa);
 };

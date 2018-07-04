@@ -1,0 +1,5 @@
+Numero da mesa: 1
+Quantidade de Cadeira: 4
+Data da reserva: 2/1
+Hora da reserva: 18:0
+Status da mesa: RESERVADA

@@ -28,6 +28,24 @@ void Mesa::setStatus( Status status ){
     this->status.push_back( status );
 }
 
+void Mesa::removeStatus( std::string data ){
+    int tamanho = status.size();
+    int contador = 0;  
+    for(auto i = 0; i < tamanho ; i++){
+        if( status[i].getData() == data ){
+            if( contador+1 < (int) this->status.size() ){
+                status.erase( status.begin() + contador );
+            }else{
+                status.pop_back();
+            }
+            std::cout<<"A reseva da mesa " << 
+            this->numero__mesa<< " para o dia " << data <<
+            " foi removida com sucesso !"<< std::endl; 
+        }
+        contador++;
+    }
+}
+
 int Mesa::getNumero(){
     return this->numero__mesa;
 }
@@ -41,10 +59,10 @@ std::vector<Status> Mesa::getStatus(){
 }
 
 std::ostream& operator<< (std::ostream &o, Mesa &mesa) {
+    int tamanho = (mesa).getStatus().size();
 	o << "Numero da mesa: " << (mesa).getNumero() << std::endl << "Quantidade de Cadeira: " << (mesa).getQuantidadeCadeira() << std::endl;
-    
-    for(auto status = (mesa).getStatus().begin() ; status != (mesa).getStatus().end() ; status++){
-        o << (*status);
+    for( auto i = 0; i < tamanho; i++){
+        o << (mesa).getStatus()[i];
     }
     return o;
 }

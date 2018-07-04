@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <memory>
 #include "status.h"
 
 class Mesa{
@@ -20,6 +21,7 @@ class Mesa{
         void setNumero ( int numero );
         void setQuantidadeCadeira ( int quantidade );
         void setStatus ( Status status );
+        void removeStatus( std::string data );
 
     // Métodos getters
         int getNumero ();
