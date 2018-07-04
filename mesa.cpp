@@ -1,24 +1,17 @@
 #include "mesa.h"
 #include "status.h"
 
-Mesa::Mesa(){
-    this->status.setLivre( true );
-}
+Mesa::Mesa(){}
+
 
 Mesa::Mesa(int numero, int quantidade_cadeira):
     numero__mesa( numero ),
-    quantidade_cadeira( quantidade_cadeira ){
-        this->status.setLivre( true );
-}
+    quantidade_cadeira( quantidade_cadeira ){}
 
 Mesa::Mesa(int numero, int quantidade_cadeira, Status status):
     numero__mesa( numero ),
     quantidade_cadeira( quantidade_cadeira ){       
-        this->status.setDia( status.getDia() );
-        this->status.setMes( status.getMes() );
-        this->status.setHora( status.getHora() );
-        this->status.setMinuto( status.getMinuto() );
-        this->status.setLivre( status.getLivre() );
+        this->status.push_back( status );
 }
 
 Mesa::~Mesa(){}
@@ -32,11 +25,7 @@ void Mesa::setQuantidadeCadeira( int quantidade ){
 }
 
 void Mesa::setStatus( Status status ){
-    this->status.setDia( status.getDia() );
-    this->status.setMes( status.getMes() );
-    this->status.setHora( status.getHora() );
-    this->status.setMinuto( status.getMinuto() );
-    this->status.setLivre( status.getLivre() );
+    this->status.push_back( status );
 }
 
 int Mesa::getNumero(){
@@ -47,13 +36,15 @@ int Mesa::getQuantidadeCadeira(){
     return this->quantidade_cadeira;
 }
 
-Status Mesa::getStatus(){
+std::vector<Status> Mesa::getStatus(){
     return this->status;
 }
 
 std::ostream& operator<< (std::ostream &o, Mesa &mesa) {
-	o << "Numero da mesa: " << (mesa).getNumero() << std::endl << "Quantidade de Cadeira: " << (mesa).getQuantidadeCadeira() << std::endl
-    <<(mesa).status;
-
+	o << "Numero da mesa: " << (mesa).getNumero() << std::endl << "Quantidade de Cadeira: " << (mesa).getQuantidadeCadeira() << std::endl;
+    
+    for(auto status = (mesa).getStatus().begin() ; status != (mesa).getStatus().end() ; status++){
+        o << (*status);
+    }
     return o;
 }

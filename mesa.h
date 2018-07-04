@@ -2,17 +2,19 @@
 #define _MESA_H_
 
 #include <iostream>
+#include <vector>
+#include <string>
 #include "status.h"
 
 class Mesa{
     private:
         int numero__mesa;
         int quantidade_cadeira;
-        Status status;
+        std::vector<Status> status;
     public:
         Mesa();
-        Mesa(int numero, int quantidade_cadeira);
-        Mesa( int numero, int quantidade_cadeira, Status status);
+        Mesa( int numero, int quantidade_cadeira );
+        Mesa( int numero, int quantidade_cadeira, Status status );
         ~Mesa();
     // Métodos setters 
         void setNumero ( int numero );
@@ -22,7 +24,7 @@ class Mesa{
     // Métodos getters
         int getNumero ();
         int getQuantidadeCadeira ();
-        Status getStatus();
+        std::vector<Status> getStatus();
     //Sobrecargas
         friend std::ostream& operator<< ( std::ostream &o, Mesa &mesa);
 };

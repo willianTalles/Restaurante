@@ -67,7 +67,8 @@ std::ostream& operator<< (std::ostream &o, Status &reserva){
     if((reserva).getLivre()){
         o << "Status da mesa: LIVRE"<< std::endl; 
     }else{
-        o << "Data da reserva: " << (reserva).getData() << std::endl << "Hora da reserva: " << (reserva).getHorario() << std::endl;
+        o << "Data da reserva: " << (reserva).getData() << std::endl <<
+        "Hora da reserva: " << (reserva).getHorario() << std::endl;
         o << "Status da mesa: RESERVADA"<< std::endl;
     }
 
