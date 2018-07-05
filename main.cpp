@@ -6,12 +6,15 @@ using std::cerr;
 #include <fstream>
 #include <vector>
 #include <string>
+using std::to_string;
 #include <memory>
 
 #include "mesa.h"
 #include "status.h"
 #include "reserva.h"
 #include "excecao.h"
+#include "util.h"
+using namespace util;
 
 void menu( std::vector< std::shared_ptr< Mesa > > &mesa  ){
     int opcao = 0;
@@ -163,78 +166,14 @@ void menu( std::vector< std::shared_ptr< Mesa > > &mesa  ){
     }
 }
 
-void salvarDadosEmTxt( std::vector< std::shared_ptr< Mesa > >::iterator inicio, std::vector< std::shared_ptr< Mesa > >::iterator fim ){
-    std::ofstream file;
-    file.open("dados.txt");
-    for(auto i = inicio; i != fim ; i++){
-        file << (**i);
-    }
-    
-    // std::string dados = "Oi qual o seu nome?\n";
-    // file << dados;
-    // file.close();
-}
-
-void carregarDadosEmTxt( std::vector< std::shared_ptr< Mesa > > &mesa ){
-    int quantidade_cadeira = 0;
-    int quantidade_status = 0;
-    int dia = 0;
-    int mes = 0;
-    int hora = 0;
-    int minutos = 0;
-    Status *status = new Status();
-    Reserva *reserva = new Reserva();
-    std::ifstream file("dados.txt");
-
-    if(!file){
-        cout << "Erro ao abrir o arquivo" << endl;
-    }
-
-    for(auto i = 1; i <= 10; i++){
-        file >> quantidade_cadeira;
-        
-        mesa.push_back( std::make_shared< Mesa >( i, quantidade_cadeira ) );
-        
-        file >> quantidade_status;
-        if( quantidade_status != 0 ){
-            for(auto j = 0; j < quantidade_status; j++){
-                file >> dia;
-                file >> mes;
-                file >> hora;
-                file >> minutos;
-
-                status->setDia( dia );
-                status->setMes( mes );
-                status->setHora( hora );
-                status->setMinuto( minutos );
-                
-                reserva->fazerReserva( (*mesa[i-1]) , (*status) );
-            }
-        }
-    }
-    system("cls");
-}
-
 int main( ){
     std::vector< std::shared_ptr< Mesa > > mesa;
 
-    // mesa.push_back( std::make_shared< Mesa >( 1, 4 ) );
-    // mesa.push_back( std::make_shared< Mesa >( 2, 6 ) );
-    // mesa.push_back( std::make_shared< Mesa >( 3, 4 ) );
-    // mesa.push_back( std::make_shared< Mesa >( 4, 4 ) );
-
-    //menu(mesa);
-
     carregarDadosEmTxt( mesa );
 
-    // menu(mesa);
+    menu(mesa);
 
     salvarDadosEmTxt( mesa.begin(), mesa.end() );
 
-    // for(auto i = mesa.begin(); i != mesa.end() ; i++){
-    //     cout << (**i);
-    // }
-    
-    
     return 0;
 }
