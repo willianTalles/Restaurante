@@ -1,5 +1,10 @@
-Numero da mesa: 1
-Quantidade de Cadeira: 4
-Data da reserva: 2/1
-Hora da reserva: 18:0
-Status da mesa: RESERVADA
+4 2 2 4 18 30 3 4 20 00
+4 0
+4 0
+4 0
+4 0
+6 0
+6 0
+6 0
+8 0
+8 0

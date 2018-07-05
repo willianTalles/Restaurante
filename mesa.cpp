@@ -42,7 +42,8 @@ void Mesa::removeStatus( std::string data ){
             removeu = true;
             std::cout<<"A reseva da mesa " << 
             this->numero__mesa<< " para o dia " << data <<
-            " foi removida com sucesso !"<< std::endl; 
+            " foi removida com sucesso !"<< std::endl;
+            break; 
         }else removeu = false;
         contador++;
     }
