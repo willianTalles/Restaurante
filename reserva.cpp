@@ -16,7 +16,11 @@ void Reserva::fazerReserva( Mesa & mesa, Status status ){
 }
 
 void Reserva::removerReserva( Mesa & mesa, std::string data ){
-    mesa.removeStatus( data );
+    int tamanho = mesa.getStatus().size();
+    if( tamanho != 0 )
+        mesa.removeStatus( data );
+    else
+        std::cout << "A mesa " << mesa.getNumero() << " nao possui reservas para ser removida." << std::endl;
 }
 
 void Reserva::buscarReservaDaMesa ( Mesa mesa ){
@@ -32,4 +36,19 @@ bool Reserva::estarReservado ( Mesa mesa, Status status ){
     }
     
     return false;
+}
+
+void Reserva::estarReservado ( Mesa mesa, std::string data ){
+    int contador = 0;
+    bool reservada = true;
+    for(auto i = mesa.getStatus().begin(); i != mesa.getStatus().end() ; i++){
+        if ( mesa.getStatus()[contador].getData() == data ){
+            std::cout << "Numero da mesa: " <<mesa.getNumero() << std::endl;
+            std::cout << mesa.getStatus()[contador];
+            reservada = true;
+        }else reservada = false;
+        contador++;
+    }
+
+    if( !reservada || mesa.getStatus().size() == 0 ) std::cout << "A mesa " << mesa.getNumero() << " nao tem reserva para o dia "<< data << std::endl;
 }

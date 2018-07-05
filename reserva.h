@@ -20,6 +20,7 @@ class Reserva{
     // Métodos getters
         void buscarReservaDaMesa ( Mesa mesa );
         bool estarReservado ( Mesa mesa, Status status );
+        void estarReservado ( Mesa mesa, std::string data );
     //Sobrecargas
         //friend std::ostream& operator<< ( std::ostream &o, Mesa &mesa);
 };

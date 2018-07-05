@@ -2,7 +2,7 @@
 #include <string>
 
 Status::Status():
-    livre( true ) {}
+    livre( false ) {}
 Status::Status(int dia, int mes, int hora, int minuto, bool livre):
     dia( dia ),
     mes( mes ),
@@ -67,9 +67,9 @@ std::ostream& operator<< (std::ostream &o, Status &reserva){
     if((reserva).getLivre()){
         o << "Status da mesa: LIVRE"<< std::endl; 
     }else{
+        o << "Status da mesa: RESERVADA"<< std::endl;
         o << "Data da reserva: " << (reserva).getData() << std::endl <<
         "Hora da reserva: " << (reserva).getHorario() << std::endl;
-        o << "Status da mesa: RESERVADA"<< std::endl;
     }
 
     return o;

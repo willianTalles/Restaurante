@@ -29,6 +29,7 @@ class Mesa{
         std::vector<Status> getStatus();
     //Sobrecargas
         friend std::ostream& operator<< ( std::ostream &o, Mesa &mesa);
+        friend std::istream& operator>> ( std::istream &i, Mesa &mesa);
 };
 
 #endif
