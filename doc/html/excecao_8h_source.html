@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentação Locador de mesas: Código-Fonte de include/excecao.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentação Locador de mesas
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">excecao.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="excecao_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef _EXCECAO_H_</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define _EXCECAO_H_</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> std::invalid_argument;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_mesa_invalida.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_mesa_invalida.html">MesaInvalida</a> : <span class="keyword">public</span> invalid_argument{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_mesa_invalida.html#a37cb6bf11a5973526aa9658124cf7174">   18</a></span>&#160;        <a class="code" href="class_mesa_invalida.html#a37cb6bf11a5973526aa9658124cf7174">MesaInvalida</a>() : invalid_argument(<span class="stringliteral">&quot;O numero da mesa digitado e invalido. So temos mesa de 1 ate 10&quot;</span>){}</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_dia_invalido.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_dia_invalido.html">DiaInvalido</a> : <span class="keyword">public</span> invalid_argument{</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_dia_invalido.html#ad453baff066aa052aeb8cdd313f6f93d">   26</a></span>&#160;        <a class="code" href="class_dia_invalido.html#ad453baff066aa052aeb8cdd313f6f93d">DiaInvalido</a>() : invalid_argument(<span class="stringliteral">&quot;O dia digitado e invalido. So valores de 1 ate 31&quot;</span>){}</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_mes_invalido.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_mes_invalido.html">MesInvalido</a> : <span class="keyword">public</span> invalid_argument{</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_mes_invalido.html#aad487c6b51873674d5cfd27e59c6019c">   34</a></span>&#160;        <a class="code" href="class_mes_invalido.html#aad487c6b51873674d5cfd27e59c6019c">MesInvalido</a>() : invalid_argument(<span class="stringliteral">&quot;O mes digitado e invalido. So valores de 1 ate 12&quot;</span>){}</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_hora_invalido.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_hora_invalido.html">HoraInvalido</a> : <span class="keyword">public</span> invalid_argument{</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_hora_invalido.html#a32754b87944dded05dddaff1cc6e320a">   42</a></span>&#160;        <a class="code" href="class_hora_invalido.html#a32754b87944dded05dddaff1cc6e320a">HoraInvalido</a>() : invalid_argument(<span class="stringliteral">&quot;A hora digitada e invalida. So valores de 15 ate 23&quot;</span>){}</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_minuto_invalido.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_minuto_invalido.html">MinutoInvalido</a> : <span class="keyword">public</span> invalid_argument{</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_minuto_invalido.html#abdc87644d3d455edeae44f0fca294cdf">   50</a></span>&#160;        <a class="code" href="class_minuto_invalido.html#abdc87644d3d455edeae44f0fca294cdf">MinutoInvalido</a>() : invalid_argument(<span class="stringliteral">&quot;O dia minuto e invalido. So valores de 1 ate 59&quot;</span>){}</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_mes_invalido_html_aad487c6b51873674d5cfd27e59c6019c"><div class="ttname"><a href="class_mes_invalido.html#aad487c6b51873674d5cfd27e59c6019c">MesInvalido::MesInvalido</a></div><div class="ttdeci">MesInvalido()</div><div class="ttdoc">Método construtor padrão de status. </div><div class="ttdef"><b>Definition:</b> excecao.h:34</div></div>
+<div class="ttc" id="class_minuto_invalido_html"><div class="ttname"><a href="class_minuto_invalido.html">MinutoInvalido</a></div><div class="ttdef"><b>Definition:</b> excecao.h:45</div></div>
+<div class="ttc" id="class_mesa_invalida_html"><div class="ttname"><a href="class_mesa_invalida.html">MesaInvalida</a></div><div class="ttdef"><b>Definition:</b> excecao.h:13</div></div>
+<div class="ttc" id="class_minuto_invalido_html_abdc87644d3d455edeae44f0fca294cdf"><div class="ttname"><a href="class_minuto_invalido.html#abdc87644d3d455edeae44f0fca294cdf">MinutoInvalido::MinutoInvalido</a></div><div class="ttdeci">MinutoInvalido()</div><div class="ttdoc">Método construtor padrão de status. </div><div class="ttdef"><b>Definition:</b> excecao.h:50</div></div>
+<div class="ttc" id="class_dia_invalido_html_ad453baff066aa052aeb8cdd313f6f93d"><div class="ttname"><a href="class_dia_invalido.html#ad453baff066aa052aeb8cdd313f6f93d">DiaInvalido::DiaInvalido</a></div><div class="ttdeci">DiaInvalido()</div><div class="ttdoc">Método construtor padrão de status. </div><div class="ttdef"><b>Definition:</b> excecao.h:26</div></div>
+<div class="ttc" id="class_hora_invalido_html_a32754b87944dded05dddaff1cc6e320a"><div class="ttname"><a href="class_hora_invalido.html#a32754b87944dded05dddaff1cc6e320a">HoraInvalido::HoraInvalido</a></div><div class="ttdeci">HoraInvalido()</div><div class="ttdoc">Método construtor padrão de status. </div><div class="ttdef"><b>Definition:</b> excecao.h:42</div></div>
+<div class="ttc" id="class_hora_invalido_html"><div class="ttname"><a href="class_hora_invalido.html">HoraInvalido</a></div><div class="ttdef"><b>Definition:</b> excecao.h:37</div></div>
+<div class="ttc" id="class_mes_invalido_html"><div class="ttname"><a href="class_mes_invalido.html">MesInvalido</a></div><div class="ttdef"><b>Definition:</b> excecao.h:29</div></div>
+<div class="ttc" id="class_mesa_invalida_html_a37cb6bf11a5973526aa9658124cf7174"><div class="ttname"><a href="class_mesa_invalida.html#a37cb6bf11a5973526aa9658124cf7174">MesaInvalida::MesaInvalida</a></div><div class="ttdeci">MesaInvalida()</div><div class="ttdoc">Método construtor padrão de status. </div><div class="ttdef"><b>Definition:</b> excecao.h:18</div></div>
+<div class="ttc" id="class_dia_invalido_html"><div class="ttname"><a href="class_dia_invalido.html">DiaInvalido</a></div><div class="ttdef"><b>Definition:</b> excecao.h:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

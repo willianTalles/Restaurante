@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentação Locador de mesas: Código-Fonte de include/status.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentação Locador de mesas
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">status.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="status_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef _STATUS_H_</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define _STATUS_H_</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_status.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_status.html">Status</a>{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">int</span> dia;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">int</span> mes;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">int</span> hora;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> minuto;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">bool</span> livre;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_status.html#a944586fb328a3524805748c8f7b17f32">Status</a>();</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_status.html#a944586fb328a3524805748c8f7b17f32">Status</a>(<span class="keywordtype">int</span> dia, <span class="keywordtype">int</span> mes, <span class="keywordtype">int</span> hora, <span class="keywordtype">int</span> minuto, <span class="keywordtype">bool</span> livre);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_status.html#a1b24d90ef2560afffe9d7183e279c63c">~Status</a>();</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_status.html#ad6cd9420fc43b74eeeaf2f333462ad0f">setDia</a>( <span class="keywordtype">int</span> dia );</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_status.html#abba7b4a1ff789730c7c21af7fd116e5f">setMes</a>( <span class="keywordtype">int</span> mes );</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_status.html#a840754d40059f6602919e0d09123e46c">setHora</a>( <span class="keywordtype">int</span> hora );</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_status.html#acc2962b6d69342bc31b6e75008b870ae">setMinuto</a>( <span class="keywordtype">int</span> minuto );</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_status.html#a292eae0dd5cf196ac08a660924c8baeb">setLivre</a>( <span class="keywordtype">bool</span> status );</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_status.html#a9173ae947760835e1fe98267784883f2">getDia</a>();</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_status.html#ae1e484e6a2d2493c8154d4c5d4d6b6a3">getHora</a>();</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_status.html#a2832575d74b05c8f3f40a3925feecbe9">getMes</a>();</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_status.html#a63afd369c488c931b0741867d5216932">getMinuto</a>();</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_status.html#a00b2bc2a3d2cb56ab39c4fc6a32336ab">getLivre</a>();</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::string <a class="code" href="class_status.html#a91c40abe6268c1c71be626a9da3b0b81">getData</a>();</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        std::string <a class="code" href="class_status.html#a747710e1d205955d3978ffbf5eceecab">getHorario</a>();</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="class_status.html#a151b183c094ff66e8788d36b60d69f84">operator&lt;&lt; </a>( std::ostream &amp;o, <a class="code" href="class_status.html">Status</a> &amp;reserva);</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_status_html_abba7b4a1ff789730c7c21af7fd116e5f"><div class="ttname"><a href="class_status.html#abba7b4a1ff789730c7c21af7fd116e5f">Status::setMes</a></div><div class="ttdeci">void setMes(int mes)</div><div class="ttdoc">atribui um int ao atributo da classe status </div></div>
+<div class="ttc" id="class_status_html_a9173ae947760835e1fe98267784883f2"><div class="ttname"><a href="class_status.html#a9173ae947760835e1fe98267784883f2">Status::getDia</a></div><div class="ttdeci">int getDia()</div><div class="ttdoc">retorna atributo da classe </div></div>
+<div class="ttc" id="class_status_html_a292eae0dd5cf196ac08a660924c8baeb"><div class="ttname"><a href="class_status.html#a292eae0dd5cf196ac08a660924c8baeb">Status::setLivre</a></div><div class="ttdeci">void setLivre(bool status)</div><div class="ttdoc">atribui um bool ao atributo da classe status </div></div>
+<div class="ttc" id="class_status_html_ad6cd9420fc43b74eeeaf2f333462ad0f"><div class="ttname"><a href="class_status.html#ad6cd9420fc43b74eeeaf2f333462ad0f">Status::setDia</a></div><div class="ttdeci">void setDia(int dia)</div><div class="ttdoc">atribui um int ao atributo da classe status </div></div>
+<div class="ttc" id="class_status_html_a840754d40059f6602919e0d09123e46c"><div class="ttname"><a href="class_status.html#a840754d40059f6602919e0d09123e46c">Status::setHora</a></div><div class="ttdeci">void setHora(int hora)</div><div class="ttdoc">atribui um int ao atributo da classe status </div></div>
+<div class="ttc" id="class_status_html_a63afd369c488c931b0741867d5216932"><div class="ttname"><a href="class_status.html#a63afd369c488c931b0741867d5216932">Status::getMinuto</a></div><div class="ttdeci">int getMinuto()</div><div class="ttdoc">retorna atributo da classe </div></div>
+<div class="ttc" id="class_status_html_a91c40abe6268c1c71be626a9da3b0b81"><div class="ttname"><a href="class_status.html#a91c40abe6268c1c71be626a9da3b0b81">Status::getData</a></div><div class="ttdeci">std::string getData()</div><div class="ttdoc">Fução que uni dia e mes e retorna a data. </div></div>
+<div class="ttc" id="class_status_html_a2832575d74b05c8f3f40a3925feecbe9"><div class="ttname"><a href="class_status.html#a2832575d74b05c8f3f40a3925feecbe9">Status::getMes</a></div><div class="ttdeci">int getMes()</div><div class="ttdoc">retorna atributo da classe </div></div>
+<div class="ttc" id="class_status_html_ae1e484e6a2d2493c8154d4c5d4d6b6a3"><div class="ttname"><a href="class_status.html#ae1e484e6a2d2493c8154d4c5d4d6b6a3">Status::getHora</a></div><div class="ttdeci">int getHora()</div><div class="ttdoc">retorna atributo da classe </div></div>
+<div class="ttc" id="class_status_html_a747710e1d205955d3978ffbf5eceecab"><div class="ttname"><a href="class_status.html#a747710e1d205955d3978ffbf5eceecab">Status::getHorario</a></div><div class="ttdeci">std::string getHorario()</div><div class="ttdoc">Fução que uni hora e minuto e retorna a horario. </div></div>
+<div class="ttc" id="class_status_html_a1b24d90ef2560afffe9d7183e279c63c"><div class="ttname"><a href="class_status.html#a1b24d90ef2560afffe9d7183e279c63c">Status::~Status</a></div><div class="ttdeci">~Status()</div><div class="ttdoc">Método destrutor de status. </div></div>
+<div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> status.h:15</div></div>
+<div class="ttc" id="class_status_html_a00b2bc2a3d2cb56ab39c4fc6a32336ab"><div class="ttname"><a href="class_status.html#a00b2bc2a3d2cb56ab39c4fc6a32336ab">Status::getLivre</a></div><div class="ttdeci">bool getLivre()</div><div class="ttdoc">retorna atributo da classe </div></div>
+<div class="ttc" id="class_status_html_acc2962b6d69342bc31b6e75008b870ae"><div class="ttname"><a href="class_status.html#acc2962b6d69342bc31b6e75008b870ae">Status::setMinuto</a></div><div class="ttdeci">void setMinuto(int minuto)</div><div class="ttdoc">atribui um int ao atributo da classe status </div></div>
+<div class="ttc" id="class_status_html_a151b183c094ff66e8788d36b60d69f84"><div class="ttname"><a href="class_status.html#a151b183c094ff66e8788d36b60d69f84">Status::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;o, Status &amp;reserva)</div><div class="ttdoc">Sobrecarga do operador de inserção.  imprime na saída padrão as informações do status. </div></div>
+<div class="ttc" id="class_status_html_a944586fb328a3524805748c8f7b17f32"><div class="ttname"><a href="class_status.html#a944586fb328a3524805748c8f7b17f32">Status::Status</a></div><div class="ttdeci">Status()</div><div class="ttdoc">Método construtor padrão de status. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

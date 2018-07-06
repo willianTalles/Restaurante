@@ -40,7 +40,7 @@ void Mesa::removeStatus( std::string data ){
                 status.pop_back();
             }
             removeu = true;
-            std::cout<<"A reseva da mesa " << 
+            std::cout<<"A reserva da mesa " << 
             this->numero__mesa<< " para o dia " << data <<
             " foi removida com sucesso !"<< std::endl;
             break; 
@@ -71,7 +71,9 @@ std::ostream& operator<< (std::ostream &o, Mesa &mesa) {
     }
     
     for( auto i = 0; i < tamanho; i++){
+        o << "---------------------------------" << std::endl;
         o << (mesa).getStatus()[i];
+        o << "---------------------------------" << std::endl;
     }
     return o;
 }

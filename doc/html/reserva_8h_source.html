@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentação Locador de mesas: Código-Fonte de include/reserva.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Documentação Locador de mesas
+   &#160;<span id="projectnumber">1.5</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">reserva.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="reserva_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef _RESERVA_H_</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define _RESERVA_H_</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="status_8h.html">status.h</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mesa_8h.html">mesa.h</a>&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_reserva.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_reserva.html">Reserva</a>{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_mesa.html">Mesa</a> mesa;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_status.html">Status</a> status;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_reserva.html#a0738e74ff413ed13f9a141c5dae3d0bb">Reserva</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_reserva.html#ac94be11c03cc96f7bfc1f5a0c8c911b3">~Reserva</a>();</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_reserva.html#adf62d210adeb73c0593b3073e876245a">fazerReserva</a>( <a class="code" href="class_mesa.html">Mesa</a> &amp; mesa, <a class="code" href="class_status.html">Status</a> status );</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_reserva.html#a3f41f2ab2bb1972a13a2e320adadfa74">removerReserva</a>( <a class="code" href="class_mesa.html">Mesa</a> &amp; mesa, std::string data );</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_reserva.html#aea845597133080ade99cb6e40a6df29c">buscarReservaDaMesa</a> ( <a class="code" href="class_mesa.html">Mesa</a> mesa );</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_reserva.html#aa7b1d0a16a58883e9362eea8b65ac41d">estarReservado</a> ( <a class="code" href="class_mesa.html">Mesa</a> mesa, <a class="code" href="class_status.html">Status</a> status );</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_reserva.html#aa7b1d0a16a58883e9362eea8b65ac41d">estarReservado</a> ( <a class="code" href="class_mesa.html">Mesa</a> mesa, std::string data );</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_reserva_html_aea845597133080ade99cb6e40a6df29c"><div class="ttname"><a href="class_reserva.html#aea845597133080ade99cb6e40a6df29c">Reserva::buscarReservaDaMesa</a></div><div class="ttdeci">void buscarReservaDaMesa(Mesa mesa)</div><div class="ttdoc">imprimi na tela todas reserva de uma mesa </div></div>
+<div class="ttc" id="class_reserva_html_a0738e74ff413ed13f9a141c5dae3d0bb"><div class="ttname"><a href="class_reserva.html#a0738e74ff413ed13f9a141c5dae3d0bb">Reserva::Reserva</a></div><div class="ttdeci">Reserva()</div><div class="ttdoc">Método construtor padrão de Reserva. </div></div>
+<div class="ttc" id="class_reserva_html_ac94be11c03cc96f7bfc1f5a0c8c911b3"><div class="ttname"><a href="class_reserva.html#ac94be11c03cc96f7bfc1f5a0c8c911b3">Reserva::~Reserva</a></div><div class="ttdeci">~Reserva()</div><div class="ttdoc">Método destrutor de Reserva. </div></div>
+<div class="ttc" id="class_reserva_html_adf62d210adeb73c0593b3073e876245a"><div class="ttname"><a href="class_reserva.html#adf62d210adeb73c0593b3073e876245a">Reserva::fazerReserva</a></div><div class="ttdeci">void fazerReserva(Mesa &amp;mesa, Status status)</div><div class="ttdoc">adiciona um status no vetor status da classe mesa </div></div>
+<div class="ttc" id="mesa_8h_html"><div class="ttname"><a href="mesa_8h.html">mesa.h</a></div><div class="ttdoc">Cabeçalho da classe mesa em C++. </div></div>
+<div class="ttc" id="class_reserva_html_aa7b1d0a16a58883e9362eea8b65ac41d"><div class="ttname"><a href="class_reserva.html#aa7b1d0a16a58883e9362eea8b65ac41d">Reserva::estarReservado</a></div><div class="ttdeci">bool estarReservado(Mesa mesa, Status status)</div><div class="ttdoc">retorna se true a mesa não tem reserva caso contrario false </div></div>
+<div class="ttc" id="class_reserva_html"><div class="ttname"><a href="class_reserva.html">Reserva</a></div><div class="ttdef"><b>Definition:</b> reserva.h:18</div></div>
+<div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> status.h:15</div></div>
+<div class="ttc" id="status_8h_html"><div class="ttname"><a href="status_8h.html">status.h</a></div><div class="ttdoc">Cabeçalho da classe status em C++. </div></div>
+<div class="ttc" id="class_reserva_html_a3f41f2ab2bb1972a13a2e320adadfa74"><div class="ttname"><a href="class_reserva.html#a3f41f2ab2bb1972a13a2e320adadfa74">Reserva::removerReserva</a></div><div class="ttdeci">void removerReserva(Mesa &amp;mesa, std::string data)</div><div class="ttdoc">remove um status no vetor status da classe mesa </div></div>
+<div class="ttc" id="class_mesa_html"><div class="ttname"><a href="class_mesa.html">Mesa</a></div><div class="ttdef"><b>Definition:</b> mesa.h:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>
